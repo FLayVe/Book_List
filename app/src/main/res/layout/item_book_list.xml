@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/CustomCardCorners"
+        android:layout_marginBottom="8dp"
         app:strokeColor="@color/black">
 
 
@@ -27,6 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="@{book.title}"
                 android:textSize="36sp"
                 android:textColor="@color/black"/>
@@ -34,9 +36,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="@{book.author}"
-                android:textSize="18sp"
-                android:textStyle="italic"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 

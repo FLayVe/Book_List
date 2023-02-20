@@ -34,6 +34,11 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         //AppBar
         setHasOptionsMenu(true)
 
+        //Count
+        viewModel.elementsCount.observe(viewLifecycleOwner, Observer {count ->
+            binding.countText.text = "You`ve read $count books"
+        })
+
         //List
         binding.recyclerView.let {
             it.layoutManager = LinearLayoutManager(requireContext())
@@ -52,6 +57,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
         val searchItem = menu.findItem(R.id.search)
         val searchView = searchItem.actionView as SearchView
+        searchView.isSubmitButtonEnabled = false
         searchView.setOnQueryTextListener(this)
     }
 

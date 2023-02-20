@@ -11,12 +11,14 @@ import kotlinx.coroutines.launch
 class BookViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllBooks: LiveData<List<Book>>
+    val elementsCount: LiveData<Int>
     private var repository: BookRepository
 
     init {
         val bookDao = BookDatabase.getDatabase(application).bookDao()
         repository = BookRepository(bookDao)
         readAllBooks = repository.readAllBooks
+        elementsCount = repository.elementsCount
     }
 
     fun searchBook(searchQuery: String): LiveData<List<Book>> =repository.searchBook(searchQuery)

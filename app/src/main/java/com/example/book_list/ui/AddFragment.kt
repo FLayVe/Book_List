@@ -27,7 +27,6 @@ class AddFragment : Fragment() {
         binding = FragmentAddBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(BookViewModel::class.java)
 
-
         binding.addButton.setOnClickListener {
             val title = binding.title.text.toString()
             val author = binding.author.text.toString()

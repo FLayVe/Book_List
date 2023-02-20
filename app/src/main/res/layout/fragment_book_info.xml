@@ -30,11 +30,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:text="@{book.title}"
                     android:textColor="@color/white"
                     android:textSize="36sp"
@@ -44,10 +46,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:textAlignment="center"
                     android:text="@{book.author}"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -64,7 +66,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

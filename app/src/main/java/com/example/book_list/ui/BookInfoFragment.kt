@@ -47,6 +47,10 @@ class BookInfoFragment : Fragment() {
                 Toast.makeText(requireContext(), "Book was deleted!", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_bookInfoFragment_to_listFragment)
             }
+
+            android.R.id.home -> {
+                findNavController().navigate(R.id.action_bookInfoFragment_to_listFragment)
+            }
         }
         return true
     }

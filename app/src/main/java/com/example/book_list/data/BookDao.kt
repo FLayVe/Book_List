@@ -22,4 +22,7 @@ interface BookDao {
     @Query("SELECT * FROM book_table WHERE title LIKE :searchQuery OR author LIKE :searchQuery")
     fun search(searchQuery: String):LiveData<List<Book>>
 
+    @Query("SELECT COUNT(title) FROM book_table")
+    fun getCount(): LiveData<Int>
+
 }
